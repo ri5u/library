@@ -3,8 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
 </head>
 <body>
-     
+    <div class="container">
+        <navbar>
+            <div class="navbar-logo">Library</div>
+            <button id="addBooks">Add Book</button>
+        </navbar>
+        <div class="grid-container">
+            <div class="book-card">
+                <img src="./icons/delete.svg">
+                <p>Title: Book Title</p>
+                <p>Author: Book Author</p>
+                <p>Page: Pages</p>
+                <p>Read: Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+            <div class="book-card">
+                <p>Hello</p>
+                <p>Wow</p>
+                <p>200</p>
+                <p>Yes</p>
+            </div>
+        </div>
+        <dialog closedby="any">
+            <form class="inputForm" action="">
+                <label>
+                   Title: <input id="title" type="text" name="title">
+                </label>
+                <label>
+                   Author: <input id="author" type="text" name="author">
+                </label>
+                <label>
+                   No. of pages: <input id="pages" type="number" name="pages">
+                </label>
+                <label>
+                   Read: 
+                   <label><input id="read" type="radio" name="read" value="Yes"> Yes
+</label>                  
+                   <label><input id="read" type="radio" name="read" value="No"> No
+</label>                  
+
+                </label>
+                <button id="closeDialog">Close</button>
+                <button id="submitForm" type="submit">Submit</button>
+
+
+            </form>
+        </dialog>
+    </div>
 </body>
 </html>
