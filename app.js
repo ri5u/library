@@ -127,12 +127,3 @@ gridContainer.addEventListener("click", (e) => {
     }
 })
 
-
-
-
-
-
-
-
-
-
