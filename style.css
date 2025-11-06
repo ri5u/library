@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Quintessential&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --bg: #22223B;
+  --text: #dee2e6;
+  --accent: #403d39;
+  --card: #F2E9E4;
+}
+
 *{
     box-sizing: border-box;
 }
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 .container{
@@ -17,14 +28,21 @@ navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 50px;
+}
+
+.navbar-logo{
+    font-family: "Major Mono Display", monospace;
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .grid-container{
     max-width: 100%;
     display: grid;
     /* grid-auto-flow: column; */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 500px));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     justify-content: center;
     gap: 10px;
     padding: 20px;
@@ -32,29 +50,61 @@ navbar{
 
 
 .book-card{
-    background-color: lightblue;
-    border-radius: 5px;
+    background-color: var(--card);
+    color: var(--accent);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.2);
-    gap: 10px;
+    box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.5);
+    gap: 5px;
+    padding-bottom: 5px;
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.book-card:hover{
+    transform: scale(1.03); 
 }
 
 .book-card p{
     width: 100%;
     text-align: center;
     margin: 0px;
-    padding: 16px 0px;
+    padding: 10px 0px;
+}
+
+.book-card p.title{
+    font-family: "Quintessential", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.book-card .author,
+.book-card .pages,
+.book-card .status{
+    font-family: "Spectral", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.book-card p.status{
+    width: 80%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 22px;
 }
 
 .book-card p:last-child{
-    background-color: red;
+    background-color: #e5383b;
 }
 
 .book-card p:last-child.active{
-    background-color: green;
+    background-color: #1ec97c;
 }
 
 .book-card img{
@@ -62,6 +112,12 @@ navbar{
     height: 1.5rem;
     align-self: self-end;
     margin: 5px 5px 5px 0;
+    cursor: pointer;
+}
+
+.book-card img:hover,
+.book-card .status:hover{
+    transform: scale(1.05);
 }
 
 dialog{
@@ -88,11 +144,12 @@ dialog form label span{
 }
 
 navbar button{
+    padding: 10px 15px;
     cursor: pointer;
     outline: 0;
-    color: #fff;
-    background-color: #F082AC;
-    border-color: #F082AC;
+    background-color: #db7f8e;
+    border-color: #db7f8e;
+    border-radius: 10px;
 }
 
 dialog form button{
@@ -104,8 +161,8 @@ dialog form button{
 button{
     cursor: pointer;
     outline: 0;
-    color: #fff;
-    font-weight: 400;
+    color: var(--text);
+    font-weight: 600;
     line-height: 1.5;
     text-align: center;
     border: 1px solid transparent;

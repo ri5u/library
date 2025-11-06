@@ -29,9 +29,13 @@ function createBookCards(book){
     const pages = document.createElement("p");
     deleteIcon.src = "./icons/delete.svg";
     title.textContent = book.title;
-    author.textContent = book.author;
-    pages.textContent = book.pages;
+    title.classList.add("title");
+    author.textContent = `Author: ${book.author} `;
+    author.classList.add("author");
+    pages.textContent = `Pages: ${book.pages}`;
+    pages.classList.add("pages");
     const read = document.createElement("p");
+    read.classList.add("status");
     if(book.read === "Yes"){
         read.textContent = "READ";
         read.classList.add("active");
